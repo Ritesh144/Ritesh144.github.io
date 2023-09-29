@@ -20,62 +20,161 @@ const questions =
                 ],
         },
         {
-            "question": "Which is larget animal in the world",
-            "answer": "Blue whale",
+            "question": "Which is the smallest continent in the world?",
+            "answer": "Australia",
             "options":
                 [
                     {
-                        "text": "Shark"
+                        "text": "Asia"
                     },
                     {
-                        "text": "Blue whale"
+                        "text": "Australia"
                     },
                     {
-                        "text": "Elephant"
+                        "text": "Arctic"
                     },
                     {
-                        "text": "Giraffe"
+                        "text": "Africa"
                     }
                 ],
         },
         {
-            "question": "Which is larget animal in the world",
-            "answer": "Blue whale",
+            "question": "What is the primary purpose of Python?",
+            "answer": "All of the above",
             "options":
                 [
                     {
-                        "text": "Shark"
+                        "text": "Data analysis"
                     },
                     {
-                        "text": "Blue whale"
+                        "text": "Web development"
                     },
                     {
-                        "text": "Elephant"
+                        "text": "Machine learning"
                     },
                     {
-                        "text": "Giraffe"
+                        "text": "All of the above"
                     }
                 ],
         },
         {
-            "question": "Which is larget animal in the world",
-            "answer": "Blue whale",
+            "question": "Which of the following is NOT a valid Python data type?",
+            "answer": "Character",
             "options":
                 [
                     {
-                        "text": "Shark"
+                        "text": "Integer"
                     },
                     {
-                        "text": "Blue whale"
+                        "text": "Float"
                     },
                     {
-                        "text": "Elephant"
+                        "text": "String"
                     },
                     {
-                        "text": "Giraffe"
+                        "text": "Character"
                     }
                 ],
-        }];
+            },
+                {
+                    "question": "In Python, how do you define a function?",
+                    "answer": "def my_function()",
+                    "options":
+                        [
+                            {
+                                "text": "def my_function()"
+                            },
+                            {
+                                "text": "function my_function()"
+                            },
+                            {
+                                "text": "define my_function()"
+                            },
+                            {
+                                "text": "function = my_function()"
+                            }
+                        ],
+                    },
+                    
+                    {
+                        "question": "Which of the following is used for multiline comments in Python?",
+                        "answer": " ''' This is a comment ''' ",
+                        "options":
+                            [
+                                {
+                                    "text": "// This is a comment"
+                                },
+                                {
+                                    "text": "/* This is a comment */"
+                                },
+                                {
+                                    "text": " ''' This is a comment ''' "
+                                },
+                                {
+                                    "text": "# This is a comment"
+                                }
+                            ],
+                        },
+
+                        {
+                            "question": "How do you create an empty list in Python?",
+                            "answer": "def my_function()",
+                            "options":
+                                [
+                                    {
+                                        "text": "list()"
+                                    },
+                                    {
+                                        "text": "[]"
+                                    },
+                                    {
+                                        "text": "empty_list()"
+                                    },
+                                    {
+                                        "text": "create_list()"
+                                    }
+                                ],
+                            },
+                            {
+                                "question": "What is the result of the expression 5 + 3 * 2 in Python?",
+                                "answer": "11",
+                                "options":
+                                    [
+                                        {
+                                            "text": "10"
+                                        },
+                                        {
+                                            "text": "16"
+                                        },
+                                        {
+                                            "text": "11"
+                                        },
+                                        {
+                                            "text": "26"
+                                        }
+                                    ],
+                                },
+                                {
+                                    "question": "Which of the following is used to exit a loop prematurely in Python?",
+                                    "answer": "11",
+                                    "options":
+                                        [
+                                            {
+                                                "text": "stop"
+                                            },
+                                            {
+                                                "text": "end"
+                                            },
+                                            {
+                                                "text": "break"
+                                            },
+                                            {
+                                                "text": "Elephant"
+                                            }
+                                        ],
+                                    }                 
+                
+];
 
 
 const questionElement = document.getElementById("question");
