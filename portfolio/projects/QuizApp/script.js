@@ -1,183 +1,181 @@
-const questions=[
-    {
-        question: "Which is larget animal in the world",
-        answers:[
-            {text: "Shark",correct: false},
-            {text: "Blue whale",correct: true},
-            {text: "Elephant",correct: false},
-            {text: "Giraffe",correct: false},
-        ]
-    },
-
-    {   question: "Which is the smallest continent in the world?",
-        answers: [
-        
-        {text: "Asia",correct: false},
-        {text: "Australia" ,correct: true},
-        {text: "Arctic",correct: false},
-        {text: "Africa",correct: false},
-        ]
-    },
-
-    {
-        question: "What is the primary purpose of Python?",
-        answers:[
-            {text: "Data analysis",correct: false},
-            {text: "Web development",correct: false},
-            {text: "Machine learning",correct: false},
-            {text: "All of the above",correct: true},
-        ]
-    },
-
-    {
-        question: "Which of the following is NOT a valid Python data type?",
-        answers:[
-            {text: "Integer",correct: false},
-            {text: "Float",correct: false},
-            {text: "String",correct: false},
-            {text: "Character",correct: true},
-        ]
-    },
-
-    {
-        question: " In Python, how do you define a function?",
-        answers:[
-            {text: "def my_function()",correct: true},
-            {text: "function my_function()",correct: false},
-            {text: "define my_function()",correct: false},
-            {text: "function = my_function()",correct: false},
-        ]
-    },
-
-    {
-        question: "Which of the following is used for multiline comments in Python?",
-        answers:[
-            {text: "// This is a comment",correct: false},
-            {text: "/* This is a comment */",correct: false},
-            {text: " ''' This is a comment ''' ",correct: true},
-            {text: "# This is a comment",correct: false},
-        ]
-    },
-
-    {
-        question: "How do you create an empty list in Python?",
-        answers:[
-            {text: "list()",correct: false},
-            {text: "[]",correct: true},
-            {text: "empty_list()",correct: false},
-            {text: "create_list()",correct: false},
-        ]
-    },
-
-    {
-        question: "What is the result of the expression 5 + 3 * 2 in Python?",
-        answers:[
-            {text: "10",correct: false},
-            {text: "16",correct: false},
-            {text: "11",correct: true},
-            {text: "26",correct: false},
-        ]
-    },
-
-    {
-        question: "Which of the following is used to exit a loop prematurely in Python?",
-        answers:[
-            {text: "stop",correct: false},
-            {text: "end",correct: false},
-            {text: "break",correct: ture},
-            {text: "Elephant",correct: false},
-        ]
-    },
+const questions =
+    [
+        {
+            "question": "Which is larget animal in the world",
+            "answer": "Blue whale",
+            "options":
+                [
+                    {
+                        "text": "Shark"
+                    },
+                    {
+                        "text": "Blue whale"
+                    },
+                    {
+                        "text": "Elephant"
+                    },
+                    {
+                        "text": "Giraffe"
+                    }
+                ],
+        },
+        {
+            "question": "Which is larget animal in the world",
+            "answer": "Blue whale",
+            "options":
+                [
+                    {
+                        "text": "Shark"
+                    },
+                    {
+                        "text": "Blue whale"
+                    },
+                    {
+                        "text": "Elephant"
+                    },
+                    {
+                        "text": "Giraffe"
+                    }
+                ],
+        },
+        {
+            "question": "Which is larget animal in the world",
+            "answer": "Blue whale",
+            "options":
+                [
+                    {
+                        "text": "Shark"
+                    },
+                    {
+                        "text": "Blue whale"
+                    },
+                    {
+                        "text": "Elephant"
+                    },
+                    {
+                        "text": "Giraffe"
+                    }
+                ],
+        },
+        {
+            "question": "Which is larget animal in the world",
+            "answer": "Blue whale",
+            "options":
+                [
+                    {
+                        "text": "Shark"
+                    },
+                    {
+                        "text": "Blue whale"
+                    },
+                    {
+                        "text": "Elephant"
+                    },
+                    {
+                        "text": "Giraffe"
+                    }
+                ],
+        }];
 
 
-    {
-        question: "How do you open a file named example.txt for reading in Python?",
-        answers:[
-            {text: "Sopen example.txt, r",correct: ture},
-            {text: "read example.txt" ,correct: false},
-            {text: " file_open example.txt, read",correct: false},
-            {text: "fopen example.txt",correct: false},
-        ]
-    },
-
-    {
-        question: "What is the output of print ('Hello, ' + 'world!') in Python?",
-        answers:[
-            {text: "Hello, world!",correct: ture},
-            {text: "Hello + world!",correct: false},
-            {text: "HelloWorld!",correct: false},
-            {text: "Error: unsupported operand type(s) for +: 'str' and 'str'",correct: false},
-        ]
-    },
-
-    {
-        question: "In Python, what does the len() function do?",
-        answers: [
-            { text: "alculate logarithms",correct: false},
-            { text: "Find the length of a list or string",correct: true}, 
-            { text: "onvert to lowercaset",correct: false},
-            { text: "Calculate exponentials",correct: false}, 
-        ]
-    }
-];
-
-
-const questionElement = document.getE1ementById( " question " );
-const answerButtons = document.getE1ementById("answer-buttons");
-const nextButton = document.getE1ementById("next-btn");
+const questionElement = document.getElementById("question");
+const answerButtons = document.getElementById("answer-buttons");
+const nextButton = document.getElementById("next-btn");
 
 let currentQuestionIndex = 0;
 let score = 0;
 
-function startQuiz(){
+
+startQuiz();
+
+function startQuiz() {
     currentQuestionIndex = 0;
     score = 0;
-    nextButton.innerHTML ="Next";
+    nextButton.innerHTML = "Next";
     showQuestion();
 }
 
-function showQuestion(){
-    resetState();
+function showQuestion() {
+    //resetState();
     let currentQuestion = questions[currentQuestionIndex];
+
+    // console.log("show quetion "+ JSON.stringify(questions[1]));
+
     let questionNo = currentQuestionIndex + 1;
     questionElement.innerHTML = questionNo + ". " + currentQuestion.question;
 
+    let lenghOfAnswers = currentQuestion.options.length;
 
-    currentQuestion.answers.forEach(answer => {
+
+    for (let index = 0; index < lenghOfAnswers; index++) {
         const button = document.createElement("button");
-        button.innerHTML = answer.text;
         button.classList.add("btn");
+        button.innerText = currentQuestion.options[index].text;
+        button.addEventListener("click", selectAnswer);
         answerButtons.appendChild(button);
-        if(answer.correct){
-            button.dataset.correct = answer.correct;
-        }
-        button.addEventListener("click", selectAnswer);    
-    });
+    }
 }
 
-function resetState(){
-    nextButton.style.display = "none";
-    while (answerButtons.firstChild){
+
+
+function selectAnswer(e) {
+    const selectedBtn = e.target;
+
+    if (selectedBtn.innerHTML === questions[currentQuestionIndex].answer) {
+        // alert("Correct!");
+        selectedBtn.classList.add("correct");
+        score++;
+        // TODO: block other click events buttons
+        
+    }
+    else {
+        // TODO: block other click events buttons
+        
+        selectedBtn.classList.add("incorrect");
+    }
+    
+    Array.from(answerButtons.children).forEach(button =>{
+        if(button.dataset.correct === "true"){
+            button.classList.add("correct");
+        }
+        button.disabled = true;
+    });
+    // nextButton.style.display="block";
+}
+
+function removeAllButtons() {
+    while (answerButtons.firstChild) {
         answerButtons.removeChild(answerButtons.firstChild);
     }
 }
 
-function selectAnswer(e){
-    const selectedBtn = e.target;
-    const isCorrect = selectedBtn.dataset.correct === "true";
-    if(isCorrect){
-        selectedBtn.classList.add("correct");
+function NextQuestion() {
+    removeAllButtons();
+
+    currentQuestionIndex++;
+
+
+    if (currentQuestionIndex >= questions.length) {
+        showScoreResults();
     }
-    else{
-        selectedBtn.classList.add("incorrect");
+    else {
+        showQuestion();
     }
-    Array.from(answerButtons.childern).forEach(button =>{
-        if(button.dataset.correct === "true"){
-            button.classList.add("correct");
-        }
-        button.disabled =true;
-    });
-    nextButton.style.display ="block";
+
+    if (nextButton.innerHTML === "Reset") {
+        nextButton.innerHTML = "Reseting...";
+
+        setInterval(() => {
+            location.reload();
+        }, 3000);
+    }
 }
 
-startQuiz(); 
+function showScoreResults() {
+
+    // hide next button
+    // 
+    questionElement.innerHTML = "Your Score is: " + score;
+    nextButton.innerHTML = "Reset";
+}
+
